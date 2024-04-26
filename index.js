@@ -83,41 +83,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 // Scrolltrigger animation
 gsap.registerPlugin(ScrollTrigger);
 
-/*
-// Function to animate elements
-function animateElements(elements) {
-  gsap.to(elements, {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: "power3.out",
-  });
-}
-
-// Function to check if an element has the 'animate' attribute
-function hasAnimateAttribute(element) {
-  return element.getAttribute("animate") !== null;
-}
-
-// Find all elements with the 'animate' attribute
-const animateContainers = document.querySelectorAll("[animate]");
-
-// Loop through each animate container and set up ScrollTrigger
-animateContainers.forEach((container) => {
-  const elementsToAnimate = container.children;
-  //animateElements(elementsToAnimate);
-
-  ScrollTrigger.create({
-    trigger: container,
-    start: "top 80%", // Adjust as needed
-    //markers: true,
-    onEnter: () => animateElements(elementsToAnimate),
-    //onLeaveBack: () => animateElements(elementsToAnimate).restart(),
-  });
-});
-*/
-///////
 // Link timelines to scroll position
 function createScrollTrigger(triggerElement, timeline) {
   // Reset tl when scroll out of view past bottom of screen
