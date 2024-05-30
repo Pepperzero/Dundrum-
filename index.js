@@ -21,7 +21,6 @@ $(".team-swiper_component").each(function (index) {
       // when it gets bigger than 991px
       768: {
         slidesPerView: 3,
-        //slidesPerGroup: 2,
         spaceBetween: 16,
       },
       // when it gets bigger than 991px
