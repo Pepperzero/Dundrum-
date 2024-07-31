@@ -45,6 +45,82 @@ $(".team-swiper_component").each(function (index) {
   });
 });
 
+// Review swiper
+$(".review-swiper_component").each(function (index) {
+  const swiper = new Swiper($(this).find(".swiper")[0], {
+    slidesPerView: 1,
+    spaceBetween: 8,
+    speed: 500,
+    centerInsufficientSlides: true,
+    loop: true,
+    // autoplay: {
+    //   delay: 6000,
+    //   disableOnInteraction: false,
+    // },
+    breakpoints: {
+      // when it gets bigger than 478px
+      478: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+      // when it gets bigger than 991px
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      // when it gets bigger than 991px
+      991: {
+        slidesPerView: 4,
+        //slidesPerGroup: 2,
+        spaceBetween: 16,
+      },
+    },
+    pagination: {
+      el: $(this).find(".swiper-bullet-wrapper")[0],
+      bulletActiveClass: "is-active",
+      bulletClass: "swiper-bullet",
+      bulletElement: "div",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: $(this).find(".swiper-next")[0],
+      prevEl: $(this).find(".swiper-prev")[0],
+      disabledClass: "is-disabled",
+    },
+  });
+});
+
+// notification swiper
+$(".notification_component").each(function (index) {
+  const swiper = new Swiper($(this).find(".swiper")[0], {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 500,
+    centerInsufficientSlides: true,
+    loop: true,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    autoplay: {
+      delay: 12000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-fractions",
+      type: "fraction",
+      renderCustom: function (swiper, current, total) {
+        return current + "/" + (total - 1);
+      },
+    },
+    navigation: {
+      nextEl: $(this).find(".swiper-next")[0],
+      prevEl: $(this).find(".swiper-prev")[0],
+      disabledClass: "is-disabled",
+    },
+  });
+});
+
 ////// GSAP
 
 //Menu animation
