@@ -8,6 +8,7 @@ $(".team-swiper_component").each(function (index) {
     speed: 500,
     centerInsufficientSlides: true,
     loop: true,
+    watchOverflow: true,
     // autoplay: {
     //   delay: 6000,
     //   disableOnInteraction: false,
